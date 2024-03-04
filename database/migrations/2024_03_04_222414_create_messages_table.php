@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
+            $table->text('title');
+            $table->text('content');
+            $table->text('dept_focus');
             $table->timestamps();
         });
     }
