@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -10,8 +11,14 @@ class UserTableSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run()
     {
         //
+        $u = new User;
+        $u->id = 1;
+        $u->name = 'Emmanuel Okere';
+        $u->email = 'emmanuel.okere2010@gmail.com';
+        $u->password = 'avatar88';
+        $u->save();
     }
 }
