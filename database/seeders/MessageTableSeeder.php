@@ -20,5 +20,7 @@ class MessageTableSeeder extends Seeder
         $m->content = 'My team and I have come up with a new marketing strategy that I believe needs review.';
         $m->dept_focus = 'Management';
         $m->save();
+
+        Message::factory()->count(20)->create();
     }
 }

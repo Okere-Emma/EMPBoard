@@ -19,5 +19,7 @@ class EmployeeTableSeeder extends Seeder
         $e->dept = 'Marketing';
         $e->office_line = '07774131391';
         $e->save();
+
+        Employee::factory()->count(5)->create();
     }
 }

@@ -18,6 +18,9 @@ class MessageFactory extends Factory
     {
         return [
             //
+            'title' => fake()->realText($maxNbChars = 50, $indexSize =2),
+            'content' => fake()->realText($maxNbChars = 100, $indexSize =2),
+            'dept_focus' => fake()->jobTitle(),
         ];
     }
 }

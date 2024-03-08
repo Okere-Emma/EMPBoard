@@ -18,6 +18,7 @@ class ReplyFactory extends Factory
     {
         return [
             //
+            'content' => fake()->realText($maxNbChars = 200, $indexSize =2),
         ];
     }
 }
