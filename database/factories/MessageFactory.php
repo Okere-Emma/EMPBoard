@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,9 +19,10 @@ class MessageFactory extends Factory
     {
         return [
             //
+            'user_id' => User::inRandomOrder()->first(),
             'title' => fake()->realText($maxNbChars = 50, $indexSize =2),
             'content' => fake()->realText($maxNbChars = 100, $indexSize =2),
-            'dept_focus' => fake()->jobTitle(),
+            //'dept_focus' => fake()->jobTitle(),
         ];
     }
 }

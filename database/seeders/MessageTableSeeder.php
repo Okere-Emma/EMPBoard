@@ -16,6 +16,7 @@ class MessageTableSeeder extends Seeder
         //
         $m = new Message;
         $m->id = 1;
+        $m->user_id = 1;
         $m->title = 'New campaign';
         $m->content = 'My team and I have come up with a new marketing strategy that I believe needs review.';
         $m->dept_focus = 'Management';

@@ -11,12 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('replies', function (Blueprint $table) {
+        Schema::create('department_message', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('employee_id')->unsigned();
+            $table->foreign('employee_id')->references('id')->on('employees')
+                ->onDelete('cascade')->onUpdate('cascade');
             $table->bigInteger('message_id')->unsigned();
             $table->foreign('message_id')->references('id')->on('messages')
                 ->onDelete('cascade')->onUpdate('cascade');
-            $table->text('content');
+                
+            //$table->foreignId('employee_id')->constrained()->onDelete('cascade');
+            //$table->foreignId('message_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('replies');
+        Schema::dropIfExists('department_message');
     }
 };

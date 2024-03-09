@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onDelete('cascade')->onUpdate('cascade');
             $table->text('title');
             $table->text('content');
-            $table->text('dept_focus');
+            //$table->text('dept_focus');
             $table->timestamps();
         });
     }

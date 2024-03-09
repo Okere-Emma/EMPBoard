@@ -16,6 +16,7 @@ class EmployeeTableSeeder extends Seeder
         //
         $e = new Employee;
         $e->id = 1;
+        $e->user_id = 1;
         $e->dept = 'Marketing';
         $e->office_line = '07774131391';
         $e->save();

@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Reply extends Model
 {
     use HasFactory;
+
+    public function message(){
+        return $this->belongsTo(Message::class);
+    }
 }

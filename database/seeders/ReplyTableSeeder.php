@@ -16,9 +16,10 @@ class ReplyTableSeeder extends Seeder
         //
         $r = new Reply;
         $r->id = 1;
+        $r->message_id = 1;
         $r->content = 'The marketing team have received your campaign and will get back to you before the end of the week with a review';
         $r->save();
 
-        Reply::factory()->count(50)->create();
+        Reply::factory()->count(30)->create();
     }
 }

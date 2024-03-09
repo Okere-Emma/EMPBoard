@@ -19,8 +19,8 @@ class EmployeeFactory extends Factory
     {
         return [
             //
-            //'user_id' => User::inRandomOrder()->first(),
-            'dept' => fake()->jobTitle(),
+            'user_id' => User::inRandomOrder()->first(),
+            //'dept' => fake()->jobTitle(),
             'office_line' => fake()->tollFreePhoneNumber(),
         ];
     }
